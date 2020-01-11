@@ -3,19 +3,19 @@ import React from 'react';
 
 const CharList = (props) => {
 
-    // Try to think through what state you'll need for this app before starting. Then build out
-    // the state properties here.
-  
-    // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-    // side effect in a component, you want to think about which state and/or props it should
-    // sync up with, if any.
+    
   
     return (
         <div>
-      <h1>{props.x}</h1>
-      
-      
-      </div>
+          <h3>Name: {props.name}</h3>
+          <h4>Height: {props.height}</h4>
+          <h4>Wieght: {props.mass}</h4>
+          <h4>Hair Color: {props.hair}</h4>
+          <h4>Skin Color: {props.skin}</h4>
+          <h4>Eye Color: {props.eye}</h4>
+          <h4>Date of Birth: {props.birth}</h4>
+          <h4>Gender: {props.gender}</h4>
+     </div>
       )
   }
   

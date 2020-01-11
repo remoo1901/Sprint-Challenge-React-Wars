@@ -18,25 +18,23 @@ const Char = () => {
           .catch(err => console.log('error loading', err))
   
     },[])
-    // Try to think through what state you'll need for this app before starting. Then build out
-    // the state properties here.
-  
-    // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-    // side effect in a component, you want to think about which state and/or props it should
-    // sync up with, if any.
   
     return (
-     
-        
-          
           <div>
-          {star.map((x,index) =>{
-
-           return  <CharList key={index} x={x.name} />
-          })}
+             {star.map((people,index) =>{
+              return  <CharList
+                  key={index} 
+                  name = {people.name}
+                  height = {people.height}
+                  mass = {people.mass}
+                  hair = {people.hair_color}
+                  skin = {people.skin_color}
+                  eye = {people.eye_color}
+                  birth = {people.birth_year}
+                  gender = {people.gender}
+               />
+              })}
        </div> 
-
-       
     )
   }
   
