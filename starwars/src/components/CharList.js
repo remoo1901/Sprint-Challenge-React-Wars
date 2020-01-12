@@ -22,7 +22,7 @@ const CharList = (props) => {
                           <CardBody>
                           <CardTitle><h2>Name: {props.name}</h2></CardTitle> 
                           <p>Height: {props.height} cm</p>
-                          <p>Wieght: {props.mass} kg</p>
+                          <p>Weight: {props.mass} kg</p>
                           <p>Hair Color: {props.hair}</p>
                           <p>Skin Color: {props.skin}</p>
                           <p>Eye Color: {props.eye}</p>
