@@ -1,7 +1,15 @@
 import React, {useState, useEffect} from 'react';
-
 import axios from "axios";
 import CharList from './CharList';
+import './StarWars.css';
+import styled from 'styled-components'
+
+const StarWrapper = styled.div`
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 100%;
+        margin-bottom: 15px; `
 
 
 const Char = () => {
@@ -20,7 +28,7 @@ const Char = () => {
     },[])
   
     return (
-          <div>
+          <StarWrapper>
              {star.map((people,index) =>{
               return  <CharList className="cards"
                   key={index} 
@@ -34,18 +42,9 @@ const Char = () => {
                   gender = {people.gender}
                />
               })}
-       </div> 
+          </StarWrapper> 
     )
   }
   
   export default Char;
-  
-  /*  name = {star.name}
-          height = {star.height}
-          mass = {star.mass}
-          hair_color = {star.hair_color}
-          eye_color = {star.eye_color}
-          birth_year = {star.birth_year}
-          gender = {star.gender}
-          homeworld = {star.homeworld}
-          films = {star.films} */
+ 
