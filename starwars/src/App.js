@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Char from "./components/Char"
-import CharList from './components/CharList';
+
 
 
 const App = () => {
@@ -17,9 +17,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Char />
-      <CharList />
-      
+      <Char /> 
     </div>
   );
 }

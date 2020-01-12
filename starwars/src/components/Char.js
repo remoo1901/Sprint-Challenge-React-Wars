@@ -22,7 +22,7 @@ const Char = () => {
     return (
           <div>
              {star.map((people,index) =>{
-              return  <CharList
+              return  <CharList className="cards"
                   key={index} 
                   name = {people.name}
                   height = {people.height}

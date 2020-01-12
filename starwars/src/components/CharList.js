@@ -1,4 +1,24 @@
 import React from 'react';
+import {
+    Card,CardImg, CardText, CardBody,
+    CardTitle
+  } from 'reactstrap';
+  import styled from 'styled-components'
+
+
+  const StyledP =styled.p`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 250px;
+  max-height: 500px;
+  background-color: yellow;
+  
+  `
+
+  const StyledDiv =styled.div`
+  
+  `
 
 
 const CharList = (props) => {
@@ -7,17 +27,30 @@ const CharList = (props) => {
   
     return (
         <div>
-          <h3>Name: {props.name}</h3>
-          <h4>Height: {props.height}</h4>
-          <h4>Wieght: {props.mass}</h4>
-          <h4>Hair Color: {props.hair}</h4>
-          <h4>Skin Color: {props.skin}</h4>
-          <h4>Eye Color: {props.eye}</h4>
-          <h4>Date of Birth: {props.birth}</h4>
-          <h4>Gender: {props.gender}</h4>
+            <Card >
+                 <CardBody>
+                 
+                          <CardText><StyledP>
+                          <CardImg top width="100%" src="https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg" alt="Card image cap" />
+                          <CardTitle>Name: {props.name}</CardTitle>
+                          <StyledDiv>
+                          
+                          <p>Height: {props.height}</p>
+                          <p>Wieght: {props.mass}</p>
+                          <p>Hair Color: {props.hair}</p>
+                          <p>Skin Color: {props.skin}</p>
+                          <p>Eye Color: {props.eye}</p>
+                          <p>Date of Birth: {props.birth}</p>
+                          <p>Gender: {props.gender}</p>
+                          
+                          </StyledDiv>
+                          </StyledP>
+                          </CardText> 
+                 </CardBody>
+          </Card>
      </div>
-      )
-  }
+      );
+  };
   
   export default CharList;
   
